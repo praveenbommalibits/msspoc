@@ -1,0 +1,2 @@
+# msspoc
+Langchain based  project 
