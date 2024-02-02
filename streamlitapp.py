@@ -11,7 +11,7 @@ import os
 from langchain.chat_models import ChatOpenAI
 from htmlTemplates import css, bot_template, user_template
 embedding_model_name = os.environ.get('EMBEDDING_MODEL_NAME')
-os.environ['HUGGINGFACEHUB_API_TOKEN'] = st.secrets['HUGGINGFACEHUB_API_TOKEN']
+HUGGINGFACEHUB_API_TOKEN = st.secrets['HUGGINGFACEHUB_API_TOKEN']
 
 def get_pdf_text(pdf_docs):
     text=""
@@ -74,7 +74,7 @@ def main():
         st.markdown('''
         - [Streamlit](https://streamlit.io/)
         - [LangChain](https://python.langchain.com/)
-        - [Model:](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) sentence-transformers/all-MiniLM-L6-v2
+        - [Model](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) sentence-transformers/all-MiniLM-L6-v2
         ''')
         st.write('Text here')
         if st.button('Process'):
